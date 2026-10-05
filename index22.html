@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Attendance System</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 Smart Attendance Management System</h1>
+        <p>Student Attendance Dashboard</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Dashboard Overview</h2>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Present Today</h3>
+                <p id="presentCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Absent Today</h3>
+                <p id="absentCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Attendance Rate</h3>
+                <p id="attendanceRate">0%</p>
+            </div>
+
+        </div>
+
+
+        <!-- ADD STUDENT -->
+
+        <div class="box">
+
+            <h2>➕ Add Student</h2>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter student name"
+            >
+
+            <input
+                type="text"
+                id="rollNumber"
+                placeholder="Enter roll number"
+            >
+
+            <button id="addStudentButton">
+                Add Student
+            </button>
+
+        </div>
+
+
+        <!-- MARK ATTENDANCE -->
+
+        <div class="box">
+
+            <h2>📅 Mark Attendance</h2>
+
+            <label>Select Date:</label>
+
+            <input
+                type="date"
+                id="attendanceDate"
+            >
+
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search student"
+            >
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Student Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- REPORT -->
+
+        <div class="box">
+
+            <h2>📊 Attendance Report</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Student Name</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reportTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        Developed by Team 3 | B.Tech FSD Project
+    </footer>
+
+
+    <!-- IMPORTANT -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
